@@ -3,9 +3,9 @@
 
 int is_unique(char* input){
     int i = 0;
-    int j = 1;
+    int j;
     for(; i < strlen(input); ++i){
-        for(; j < strlen(input); ++j){
+        for(j=i+1; j < strlen(input); ++j){
             if(input[i] == input[j]){
                 return 0;
             }
