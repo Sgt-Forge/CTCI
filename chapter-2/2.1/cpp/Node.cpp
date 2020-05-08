@@ -1,14 +1,23 @@
 #include "Node.h"
 
-Node::Node(int data, Node* next){
+template <class T>
+Node<T>::Node(T data, Node* next){
     setData(data);
     setNext(next);
 }
-Node::~Node(){
+template <class T>
+Node<T>::~Node(){
 
 }
 
-int Node::getData(){ return this->data; }
-Node* Node::getNext(){ return this->next; }
-void Node::setData(int data){ this->data = data; }
-void Node::setNext(Node* next){ this->next = next; }
+template <class T>
+T Node<T>::getData(){ return this->data; }
+
+template <class T>
+Node<T>* Node<T>::getNext(){ return this->next; }
+
+template <class T>
+void Node<T>::setData(T data){ this->data = data; }
+
+template <class T>
+void Node<T>::setNext(Node<T>* next){ this->next = next; }
