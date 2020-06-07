@@ -1,18 +1,19 @@
 #ifndef NODE_H
 #define NODE_H
 
+template <class T>
 class Node{
     private:
-        int data;
+        T data;
         Node* next;
 
     public:
-        Node(int data, Node* next);
+        Node(T data, Node* next);
         ~Node();
 
-        int getData();
+        T getData();
         Node* getNext();
-        void setData(int data);
+        void setData(T data);
         void setNext(Node* next);
 };
 
